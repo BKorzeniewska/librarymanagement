@@ -2,16 +2,14 @@ package project.librarymanagement.librarymanagement;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
 @RestController
-public class LibraController {
+public class LibraryController {
     @Autowired
-    BookRepository bookRepository;
-    AuthorRepository authorRepository;
+
     LibraryRepository libraryRepository;
     HireRepository hireRepository;
     LocationRepository locationRepository;
@@ -23,23 +21,7 @@ public class LibraController {
     {
         return 1;
     }
-    @GetMapping("/books")
-    public List<Book> getAllBook()
-    {
-       return bookRepository.getAll();
-    }
-    // books
-    @GetMapping("/books/{id}")
-    public Book getBookId(@PathVariable("id")int id)
-    {
-        return bookRepository.getBookId(id);
-    }
-    @GetMapping("/books/2016")
-    // author
-    public Book getBookYear()
-    {
-        return bookRepository.getBookYear(2016);
-    }
+
 
     // library
     @GetMapping("/library/")
@@ -66,11 +48,5 @@ public class LibraController {
     public Hire getHireId() {return hireRepository.getOnId(1);}
     @GetMapping("/hire")
     public List<Hire> getHireAll() {return hireRepository.getAll();}
-
-    @GetMapping("/author/1")
-    public Author getAuthorId()
-    {
-        return authorRepository.getAuthorId(1);
-    }
 
 }

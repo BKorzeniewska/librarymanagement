@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-public class AuthorControll {
+public class AuthorController {
     @Autowired
     AuthorRepository authorRepository;
 
@@ -15,6 +15,13 @@ public class AuthorControll {
     public List<Author> getAllAuthor()
     {
         return authorRepository.getAll();
+    }
+
+
+    @GetMapping("/author/1")
+    public Author getAuthorId()
+    {
+        return authorRepository.getAuthorId(1);
     }
 
 }
