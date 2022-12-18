@@ -10,7 +10,7 @@ import java.util.List;
 @RestController
 public class LibraController {
     @Autowired
-    BookRepository bookRepository;
+
     AuthorRepository authorRepository;
     LibraryRepository libraryRepository;
     HireRepository hireRepository;
@@ -22,23 +22,6 @@ public class LibraController {
     public int test()
     {
         return 1;
-    }
-    @GetMapping("/books")
-    public List<Book> getAllBook()
-    {
-       return bookRepository.getAll();
-    }
-    // books
-    @GetMapping("/books/{id}")
-    public Book getBookId(@PathVariable("id")int id)
-    {
-        return bookRepository.getBookId(id);
-    }
-    @GetMapping("/books/2016")
-    // author
-    public Book getBookYear()
-    {
-        return bookRepository.getBookYear(2016);
     }
 
     // library
