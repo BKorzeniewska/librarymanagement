@@ -12,7 +12,6 @@ public class LibraryController {
     @Autowired
 
     LibraryRepository libraryRepository;
-    HireRepository hireRepository;
     LocationRepository locationRepository;
     UserRepository userRepository;
 
