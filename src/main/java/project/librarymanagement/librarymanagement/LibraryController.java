@@ -8,10 +8,9 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-public class LibraController {
+public class LibraryController {
     @Autowired
 
-    AuthorRepository authorRepository;
     LibraryRepository libraryRepository;
     HireRepository hireRepository;
     LocationRepository locationRepository;
@@ -49,11 +48,5 @@ public class LibraController {
     public Hire getHireId() {return hireRepository.getOnId(1);}
     @GetMapping("/hire")
     public List<Hire> getHireAll() {return hireRepository.getAll();}
-
-    @GetMapping("/author/1")
-    public Author getAuthorId()
-    {
-        return authorRepository.getAuthorId(1);
-    }
 
 }
