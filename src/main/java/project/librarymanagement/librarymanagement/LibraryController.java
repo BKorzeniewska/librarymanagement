@@ -12,13 +12,6 @@ public class LibraryController {
     @Autowired
     LibraryRepository libraryRepository;
 
-    @GetMapping("/test")
-    public int test()
-    {
-        return 1;
-    }
-
-    // library
     @GetMapping("/library/")
     public Library getLibraryId() {return libraryRepository.getLibraryId(1);}
     @GetMapping("/library")

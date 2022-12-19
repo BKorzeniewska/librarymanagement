@@ -1,9 +1,14 @@
 package project.librarymanagement.librarymanagement;
 
 import com.fasterxml.jackson.datatype.jsr310.deser.key.LocalDateKeyDeserializer;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
-
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Hire {
     private int idReservation;
     private Person User;

@@ -1,7 +1,13 @@
 package project.librarymanagement.librarymanagement;
 
-import java.time.LocalDate;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Person {
     int id;
     String pesel;
@@ -10,14 +16,5 @@ public class Person {
     String name;
     String surname;
     boolean gender;
-    Person ( String p, LocalDate d, Category k, String i, String n, boolean pl) {
-        this.name = i;
-        this.surname = n;
-        this.pesel = p;
-        this.gender = pl;
-        this.bright = d;
-        this.category = k;
-    }
-
 }
 

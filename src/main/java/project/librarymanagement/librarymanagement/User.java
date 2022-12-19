@@ -1,7 +1,13 @@
 package project.librarymanagement.librarymanagement;
 
-import java.time.LocalDate;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class User extends Person {
     private int idUser;
     private String telephone;
@@ -10,10 +16,5 @@ public class User extends Person {
     private Person supervisor;
     private LocalDate dateJoin;
     private Location address;
-    User()
-    {
-        super("",LocalDate.now(), Category.Employer, "","",true);
-    }
-
 
 }
