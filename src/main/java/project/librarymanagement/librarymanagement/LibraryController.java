@@ -14,7 +14,6 @@ public class LibraryController {
     LibraryRepository libraryRepository;
     HireRepository hireRepository;
     LocationRepository locationRepository;
-    ReaderRepository readerRepository;
     UserRepository userRepository;
 
     @GetMapping("/test")
@@ -33,11 +32,5 @@ public class LibraryController {
     public Location getLocationId() {return locationRepository.getLocationId(1);}
     @GetMapping("/location")
     public List<Location> getLocationAll() {return locationRepository.getAll();}
-    // reader
-    @GetMapping("/reader/1")
-    public Reader getReaderId() {return readerRepository.getOnId(1);}
-    @GetMapping("/reader")
-    public List<Reader> getReaderAll() {return readerRepository.getAll();}
-
 
 }
