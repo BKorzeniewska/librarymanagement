@@ -17,7 +17,6 @@ public class AuthorController {
         return authorRepository.getAll();
     }
 
-
     @GetMapping("/author/1")
     public Author getAuthorId()
     {
