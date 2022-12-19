@@ -1,4 +1,4 @@
-package project.librarymanagement.librarymanagement;
+package project.librarymanagement.librarymanagement.user;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
@@ -15,6 +15,6 @@ public class UserRepository {
         return jdbcTemplate.query("SELECT * FROM user", BeanPropertyRowMapper.newInstance(User.class));
     }
     public User getOnId(int id){
-        return jdbcTemplate.queryForObject("SELECT * FROM location WHERE "+" idUser=?", BeanPropertyRowMapper.newInstance(User.class),id);
+        return jdbcTemplate.queryForObject("SELECT * FROM user WHERE "+" idUser=?", BeanPropertyRowMapper.newInstance(User.class),id);
     }
 }

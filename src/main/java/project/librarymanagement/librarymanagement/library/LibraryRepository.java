@@ -1,9 +1,10 @@
-package project.librarymanagement.librarymanagement;
+package project.librarymanagement.librarymanagement.library;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
+import project.librarymanagement.librarymanagement.library.Library;
 
 import java.util.List;
 

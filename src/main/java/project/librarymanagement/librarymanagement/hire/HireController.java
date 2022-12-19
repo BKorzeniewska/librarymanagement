@@ -1,4 +1,4 @@
-package project.librarymanagement.librarymanagement;
+package project.librarymanagement.librarymanagement.hire;
 
 
 import org.springframework.beans.factory.annotation.Autowired;

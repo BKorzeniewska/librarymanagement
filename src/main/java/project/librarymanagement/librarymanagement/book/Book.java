@@ -1,4 +1,4 @@
-package project.librarymanagement.librarymanagement;
+package project.librarymanagement.librarymanagement.book;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
