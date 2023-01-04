@@ -18,4 +18,13 @@ public class AuthorRepository {
         return jdbcTemplate.query("SELECT * FROM author", BeanPropertyRowMapper.newInstance((Author.class)));
     }
 
+    public List<Author> getSurname(String surname){
+        return jdbcTemplate.query("SELECT * FROM author WHERE +"+"surname=?", BeanPropertyRowMapper.newInstance((Author.class)),surname);
+    }
+    public List<Author> getName(String name){
+        return jdbcTemplate.query("SELECT * FROM author WHERE +"+"name=?", BeanPropertyRowMapper.newInstance((Author.class)),name);
+    }
+
+
+
 }

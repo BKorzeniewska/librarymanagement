@@ -18,10 +18,20 @@ public class AuthorController {
         return authorRepository.getAll();
     }
 
-    @GetMapping("/author/{id}")
+    @GetMapping("/author/id/{id}")
     public Author getAuthorId(@PathVariable("id")int id)
     {
         return authorRepository.getAuthorId(id);
+    }
+    @GetMapping("/author/name/{name}")
+    public List<Author> getAuthorName(@PathVariable("name")String name)
+    {
+        return authorRepository.getName(name);
+    }
+    @GetMapping("/author/surname/{surname}")
+    public List<Author> getAuthorId(@PathVariable("surname")String surname)
+    {
+        return authorRepository.getSurname(surname);
     }
 
 }
