@@ -17,11 +17,11 @@ public class BookRepository {
     public Book getBookYear(int year){
         return jdbcTemplate.queryForObject("SELECT * FROM book WHERE "+" year=?", BeanPropertyRowMapper.newInstance((Book.class)),year);
     }
-    public Book getBookPrint(String print){
-        return jdbcTemplate.queryForObject("SELECT * FROM book WHERE "+" print=?", BeanPropertyRowMapper.newInstance((Book.class)),print);
+    public List<Book> getBookPrint(String print){
+        return jdbcTemplate.query("SELECT * FROM book WHERE "+" print=?", BeanPropertyRowMapper.newInstance((Book.class)),print);
     }
-    public Book getBookTitle(String title){
-        return jdbcTemplate.queryForObject("SELECT * FROM book WHERE "+" title=?", BeanPropertyRowMapper.newInstance((Book.class)),title);
+    public List<Book> getBookTitle(String title){
+        return jdbcTemplate.query("SELECT * FROM book WHERE "+" title=?", BeanPropertyRowMapper.newInstance((Book.class)),title);
     }
     public Book getBookId(int id){
         return jdbcTemplate.queryForObject("SELECT * FROM book WHERE "+" idBook=?", BeanPropertyRowMapper.newInstance((Book.class)),id);
