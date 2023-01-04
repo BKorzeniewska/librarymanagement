@@ -1,8 +1,8 @@
 package project.librarymanagement.librarymanagement.library;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import project.librarymanagement.librarymanagement.authors.Author;
 
 import java.util.List;
 
@@ -15,4 +15,9 @@ public class LibraryController {
     public Library getLibraryId(@PathVariable("id")int id) {return libraryRepository.getLibraryId(id);}
     @GetMapping("/library")
     public List<Library> getAll() {return libraryRepository.getAll();}
+    @PostMapping("/library/insert/")
+    public int addLibraries(@RequestBody List<Library> libraries){
+        libraryRepository.save(libraries);
+        return 1;
+    }
 }

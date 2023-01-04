@@ -1,9 +1,8 @@
 package project.librarymanagement.librarymanagement.book;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import project.librarymanagement.librarymanagement.authors.Author;
 
 import java.util.List;
 
@@ -28,6 +27,11 @@ public class BookController {
     public Book getBookYear()
     {
         return bookRepository.getBookYear(2016);
+    }
+    @PostMapping("/books/insert/")
+    public int addBooks(@RequestBody List<Book> books){
+        bookRepository.save(books);
+        return 1;
     }
 
 }

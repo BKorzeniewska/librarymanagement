@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
+import project.librarymanagement.librarymanagement.authors.Author;
 
 import java.util.List;
 
@@ -25,5 +26,9 @@ public class BookRepository {
     }
     public Book getBookId(int id){
         return jdbcTemplate.queryForObject("SELECT * FROM book WHERE "+" idBook=?", BeanPropertyRowMapper.newInstance((Book.class)),id);
+    }
+    public int save(List<Book> books) {
+        books.forEach(book->jdbcTemplate.update("Insert into book(idBook,title, print, year,numberRent) VALUES (?",book.getIdBook(),book.getTitle(),book.getPrint(),book.getYear(),book.getNum_rent()));
+        return 1;
     }
 }

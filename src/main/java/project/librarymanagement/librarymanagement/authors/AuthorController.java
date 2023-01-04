@@ -1,8 +1,7 @@
 package project.librarymanagement.librarymanagement.authors;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -22,5 +21,11 @@ public class AuthorController {
     {
         return authorRepository.getAuthorId(id);
     }
+    @PostMapping("/author/insert/")
+    public int addAuthor(@RequestBody List<Author> authors){
+        authorRepository.save(authors);
+        return 1;
+    }
+
 
 }

@@ -17,4 +17,9 @@ import java.util.HashMap;
 public class Reader extends Person {
     HashMap<LocalDate, Book> wypozyczone;
     ArrayList<Book> zalegajace;
+    boolean status;
+    public boolean getStatus()
+    {
+        return status;
+    }
 }

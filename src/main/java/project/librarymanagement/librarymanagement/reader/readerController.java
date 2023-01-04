@@ -1,8 +1,8 @@
 package project.librarymanagement.librarymanagement.reader;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import project.librarymanagement.librarymanagement.authors.Author;
 
 import java.util.List;
 
@@ -14,5 +14,10 @@ public class readerController {
     public Reader getReaderId(@PathVariable("id")int id) {return readerRepository.getOnId(id);}
     @GetMapping("/reader")
     public List<Reader> getReaderAll() {return readerRepository.getAll();}
+    @PostMapping("/reader/insert/")
+    public int addAuthor(@RequestBody List<Reader> readers){
+        readerRepository.save(readers);
+        return 1;
+    }
 
 }

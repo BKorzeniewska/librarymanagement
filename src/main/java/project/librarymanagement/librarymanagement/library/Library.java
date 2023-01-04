@@ -14,4 +14,12 @@ public class Library {
     private Location address;
     private Person owner;
     private String telephone;
+    private int num_employees;
+    public int  getOwnerId() {
+        return owner.getId();
+    }
+    public int getIdLocaction()
+    {
+        return address.getIdLocation();
+    }
 }

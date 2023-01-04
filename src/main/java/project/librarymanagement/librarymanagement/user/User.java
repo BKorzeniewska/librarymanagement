@@ -15,9 +15,14 @@ public class User extends Person {
     private int idUser;
     private String telephone;
     private Category type;
+
     private boolean status;
     private Person supervisor;
     private LocalDate dateJoin;
     private Location address;
+    public int getAddressId()
+    {
+        return address.getIdLocation();
+    }
 
 }

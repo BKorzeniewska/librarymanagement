@@ -14,4 +14,9 @@ public class Location {
     private int apartment;
     private String City;
     private String postCode;
+
+    public int getIdLocation() {
+        return idLocation;
+    }
+
 }
