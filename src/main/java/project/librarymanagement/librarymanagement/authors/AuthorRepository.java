@@ -12,7 +12,7 @@ public class AuthorRepository {
     @Autowired
     JdbcTemplate jdbcTemplate;
     public Author getAuthorId(int id){
-        return jdbcTemplate.queryForObject("SELECT idAuthor, name, username FROM author WHERE "+" idAuthor=?", BeanPropertyRowMapper.newInstance((Author.class)),id);
+        return jdbcTemplate.queryForObject("SELECT * FROM author WHERE "+" idAuthor=?", BeanPropertyRowMapper.newInstance((Author.class)),id);
     }
     public List<Author> getAll(){
         return jdbcTemplate.query("SELECT * FROM author", BeanPropertyRowMapper.newInstance((Author.class)));
