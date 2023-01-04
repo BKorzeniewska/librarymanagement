@@ -12,8 +12,8 @@ public class HireController {
 
     @Autowired
     HireRepository hireRepository;
-    @GetMapping("/hire/1")
-    public Hire getHireId() {return hireRepository.getOnId(1);}
+    @GetMapping("/hire/{id}")
+    public Hire getHireId(@PathVariable("id")int id) {return hireRepository.getOnId(id);}
     @GetMapping("/hire")
     public List<Hire> getHireAll() {return hireRepository.getAll();}
 }

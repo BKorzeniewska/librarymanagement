@@ -10,8 +10,8 @@ import java.util.List;
 public class readerController {
     @Autowired
     ReaderRepository readerRepository;
-    @GetMapping("/reader/1")
-    public Reader getReaderId() {return readerRepository.getOnId(1);}
+    @GetMapping("/reader/{id}")
+    public Reader getReaderId(@PathVariable("id")int id) {return readerRepository.getOnId(id);}
     @GetMapping("/reader")
     public List<Reader> getReaderAll() {return readerRepository.getAll();}
 

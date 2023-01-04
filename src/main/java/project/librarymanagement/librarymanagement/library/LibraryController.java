@@ -11,8 +11,8 @@ public class LibraryController {
     @Autowired
     LibraryRepository libraryRepository;
 
-    @GetMapping("/library/")
-    public Library getLibraryId() {return libraryRepository.getLibraryId(1);}
+    @GetMapping("/library/{id}")
+    public Library getLibraryId(@PathVariable("id")int id) {return libraryRepository.getLibraryId(id);}
     @GetMapping("/library")
     public List<Library> getAll() {return libraryRepository.getAll();}
 }

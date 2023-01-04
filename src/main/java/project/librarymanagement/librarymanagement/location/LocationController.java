@@ -11,8 +11,8 @@ public class LocationController {
     @Autowired
     LocationRepository locationRepository;
 
-    @GetMapping("/location/1")
-    public Location getLocationId() {return locationRepository.getLocationId(1);}
+    @GetMapping("/location/{id}")
+    public Location getLocationId(@PathVariable("id")int id) {return locationRepository.getLocationId(id);}
     @GetMapping("/location")
     public List<Location> getLocationAll() {return locationRepository.getAll();}
 

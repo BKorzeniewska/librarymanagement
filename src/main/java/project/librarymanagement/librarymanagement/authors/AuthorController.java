@@ -17,10 +17,10 @@ public class AuthorController {
         return authorRepository.getAll();
     }
 
-    @GetMapping("/author/1")
-    public Author getAuthorId()
+    @GetMapping("/author/{id}")
+    public Author getAuthorId(@PathVariable("id")int id)
     {
-        return authorRepository.getAuthorId(1);
+        return authorRepository.getAuthorId(id);
     }
 
 }
