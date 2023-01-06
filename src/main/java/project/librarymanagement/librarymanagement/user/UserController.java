@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 import project.librarymanagement.librarymanagement.authors.Author;
 
 import java.util.List;
-
+import org.springframework.web.bind.annotation.PathVariable;
 @RestController
 public class UserController {
     @Autowired

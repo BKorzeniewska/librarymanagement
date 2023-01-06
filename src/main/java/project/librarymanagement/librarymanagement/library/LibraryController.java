@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.*;
 import project.librarymanagement.librarymanagement.authors.Author;
 
 import java.util.List;
-
+import org.springframework.web.bind.annotation.PathVariable;
 @RestController
 public class LibraryController {
     @Autowired
