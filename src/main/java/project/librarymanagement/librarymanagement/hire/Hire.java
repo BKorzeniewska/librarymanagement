@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import project.librarymanagement.librarymanagement.basic.Person;
 import project.librarymanagement.librarymanagement.book.Book;
 import project.librarymanagement.librarymanagement.copy.Copy;
+import project.librarymanagement.librarymanagement.reader.Reader;
 
 import java.time.LocalDate;
 @Data
@@ -18,9 +19,10 @@ public class Hire {
     private LocalDate dateBack;
     private int idReader;
     private int penalty;
-    //private Person User;
-    //private Copy copy;
+    private Reader reader;
+    private Copy copy;
 
-
-
+    public void setReader(Reader reader) {
+        this.reader = reader;
+    }
 }
