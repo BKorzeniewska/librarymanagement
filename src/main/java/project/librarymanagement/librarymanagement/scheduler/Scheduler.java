@@ -1,4 +1,4 @@
-package project.librarymanagement.librarymanagement;
+package project.librarymanagement.librarymanagement.scheduler;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
